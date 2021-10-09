@@ -1,0 +1,112 @@
+body{
+    background-color: #1b1b1b;
+    font-family: 'Bebas Neue';
+
+    &.on{
+        background-color: #dedede;
+        animation: BodyTubelightIn 0.2s alternate;
+        animation-iteration-count: 3;
+
+        h2{
+            color: #000;
+            animation: TubelightIn 0.2s alternate-reverse;
+            animation-iteration-count: 3;
+        }
+        .toggle-button{
+            background-color: #222;
+            color: #fff;
+            border-color: #222;
+
+            &:hover{
+                background-color: transparent;
+                color: #222;
+            }
+        }
+    }
+
+    .toggle-button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #e4e4e4;
+        color: #222222;
+        padding: 8px 30px 6px;
+        font-size: 22px;
+        border: none;
+        font-family: 'Bebas Neue';
+        border-radius: 100px;
+        border: 2px solid #e4e4e4;
+        cursor: pointer;
+
+        @media (max-width: 767px){
+            font-size: 16px;
+            padding: 6px 20px 5px;
+        }
+
+        &:hover{
+            background-color: transparent;
+            color: #e4e4e4;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+
+    div{
+        height: 95vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            font-size: 100px;
+            color: #1b1b1b;
+            letter-spacing: 2px;
+
+            @media (max-width: 767px){
+                font-size: 50px;
+                letter-spacing: 0;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@keyframes BodyTubelightIn {
+    0%{
+        background-color: #fff;
+    }
+    20%{
+        background-color: #000;
+    }
+    50%{
+        background-color: #fff;
+    }
+    80%{
+        background-color: #000;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+
+
+@keyframes TubelightIn {
+    0%{
+        color: #fff;
+    }
+    20%{
+        color: #000;
+    }
+    50%{
+        color: #fff;
+    }
+    80%{
+        color: #000;
+    }
+    90%{
+        color: #fff;
+    }
+    100%{
+        color: #000;
+    }
+}
